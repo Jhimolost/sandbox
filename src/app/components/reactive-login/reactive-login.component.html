@@ -1,0 +1,32 @@
+<div class="login-wrapper">
+  <form class="login-form" [formGroup]="form">
+    <h2>Welcome Back 💫</h2>
+    <h2>{{ 'Welcome Back' | reverseText }} 💫</h2>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="you@example.com" formControlName="email" focusInput>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="••••••••" formControlName="password">
+
+    <div class="field-message" *ngIf="form.get('password')?.dirty">
+      <ng-container *ngIf="form.get('password')?.errors as errors">
+        <div *ngIf="errors['required']">
+          Password is required.
+        </div>
+        <div *ngIf="errors['minlength']">
+          Password must be at least {{ errors['minlength'].requiredLength }} characters long.
+        </div>
+        <div *ngIf="errors['passwordStrength']">
+          Your password must have lower case, upper case and numeric characters.
+        </div>
+      </ng-container>
+    </div>
+
+    <ul>
+      <li *ngFor="let item of list.controls">{{ item.value }}</li>
+    </ul>
+
+    <button type="submit" [disabled]="form.invalid || form.untouched" (click)="onSubmit()">✨ Login</button>
+  </form>
+</div>

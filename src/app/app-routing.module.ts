@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { TypeaheadComponent } from './typeahead/typeahead.component';
+import { LoginComponent } from './components/login/login.component';
+import { TypeaheadComponent } from './components/typeahead/typeahead.component';
+import { ReactiveLoginComponent } from './components/reactive-login/reactive-login.component';
 
 const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'reactive-login',
+    component: ReactiveLoginComponent
   },
   {
     path: 'typeahead',
