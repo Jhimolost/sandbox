@@ -10,6 +10,9 @@ import { FocusInputDirectiveTsDirective } from './directvives/focus-input.direct
 import { ReverseTextTsPipe } from './pipes/reverse-text.ts.pipe';
 import { ReactiveLoginComponent } from './components/reactive-login/reactive-login.component';
 import { ListWithStorageComponent } from './components/list-with-storage/list-with-storage.component';
+import { TabsContainerComponent } from './components/tabs-container/tabs-container.component';
+import { TabGroupComponent } from './components/tabs-container/tab-group/tab-group.component';
+import { TabComponent } from './components/tabs-container/tab/tab.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { ListWithStorageComponent } from './components/list-with-storage/list-wi
     FocusInputDirectiveTsDirective,
     ReverseTextTsPipe,
     ReactiveLoginComponent,
-    ListWithStorageComponent
+    ListWithStorageComponent,
+    TabsContainerComponent,
+    TabGroupComponent,
+    TabComponent
   ],
   imports: [
     BrowserModule,

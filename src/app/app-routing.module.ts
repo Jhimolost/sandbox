@@ -4,6 +4,7 @@ import { LoginComponent } from './components/login/login.component';
 import { TypeaheadComponent } from './components/typeahead/typeahead.component';
 import { ReactiveLoginComponent } from './components/reactive-login/reactive-login.component';
 import { ListWithStorageComponent } from './components/list-with-storage/list-with-storage.component';
+import { TabsContainerComponent } from './components/tabs-container/tabs-container.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
     path: 'storage',
     component: ListWithStorageComponent
   }, {
+    path: 'tabs',
+    component: TabsContainerComponent
+  },
+  {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'
