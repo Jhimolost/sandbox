@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FocusInputDirectiveTsDirective } from './directvives/focus-input.directive.ts.directive';
 import { ReverseTextTsPipe } from './pipes/reverse-text.ts.pipe';
 import { ReactiveLoginComponent } from './components/reactive-login/reactive-login.component';
+import { ListWithStorageComponent } from './components/list-with-storage/list-with-storage.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ReactiveLoginComponent } from './components/reactive-login/reactive-log
     TypeaheadComponent,
     FocusInputDirectiveTsDirective,
     ReverseTextTsPipe,
-    ReactiveLoginComponent
+    ReactiveLoginComponent,
+    ListWithStorageComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { TypeaheadComponent } from './components/typeahead/typeahead.component';
 import { ReactiveLoginComponent } from './components/reactive-login/reactive-login.component';
+import { ListWithStorageComponent } from './components/list-with-storage/list-with-storage.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,9 @@ const routes: Routes = [
   {
     path: 'typeahead',
     component: TypeaheadComponent
+  }, {
+    path: 'storage',
+    component: ListWithStorageComponent
   }, {
     path: '',
     redirectTo: 'login',

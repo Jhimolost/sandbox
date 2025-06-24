@@ -1,0 +1,19 @@
+<div>
+  <form #loginForm="ngForm">
+    <label for="key">Key</label>
+    <input id="key" name="key" focusInput ngModel required>
+
+    <label for="value">Value</label>
+    <input id="value" name="value" ngModel required>
+
+    <button type="submit" [disabled]="loginForm.invalid || loginForm.pristine" (click)="onAdd(loginForm)">ADD</button>
+    <button type="submit" [disabled]="loginForm.invalid || loginForm.pristine" (click)="onUpdate(loginForm)">UPDATE</button>
+  </form>
+</div>
+
+<ul>
+  <li *ngFor="let entry of (list | async)! | keyvalue">
+    {{ entry.key }} {{ entry.value }}
+    <button (click)="onDelete(entry.key!)">Remove</button>
+  </li>
+</ul>
